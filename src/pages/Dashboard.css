@@ -1,0 +1,112 @@
+.page-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 2px; }
+.welcome-bar { margin-bottom: 24px; }
+
+.kpi-grid { margin-bottom: 24px; }
+.kpi-card { text-align: center; padding: 24px 16px; position: relative; overflow: hidden; }
+.kpi-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 auto 12px; }
+.kpi-value { font-size: 1.8rem; font-weight: 800; color: var(--text-primary); }
+.kpi-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; font-weight: 500; }
+
+.card-title { font-size: 1rem; font-weight: 600; margin-bottom: 16px; color: var(--text-primary); }
+.card-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.card-header-row .card-title { margin-bottom: 0; }
+
+.activity-feed { display: flex; flex-direction: column; gap: 16px; }
+.activity-item { display: flex; gap: 12px; align-items: flex-start; }
+.activity-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); margin-top: 6px; flex-shrink: 0; }
+.activity-text { font-size: 0.85rem; color: var(--text-primary); line-height: 1.4; }
+.activity-time { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+
+/* Subject cards for student */
+.subject-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+.subject-card { padding: 20px; position: relative; }
+.subject-card .subj-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+.subject-card .subj-detail { font-size: 0.8rem; color: var(--text-muted); }
+.subject-card .subj-pct { font-size: 1.6rem; font-weight: 800; margin: 8px 0; }
+.subject-card .subj-bar { height: 6px; border-radius: 3px; background: var(--border-light); margin-top: 8px; overflow: hidden; }
+.subject-card .subj-bar-fill { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+
+/* Circular progress */
+.overall-card { display: flex; align-items: center; gap: 32px; padding: 32px; margin-bottom: 24px; }
+.overall-info { flex: 1; }
+.overall-pct { font-size: 3rem; font-weight: 800; }
+.overall-label { font-size: 1.1rem; color: var(--text-secondary); font-weight: 500; }
+.overall-detail { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
+.overall-status { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; }
+
+/* Teacher schedule */
+.schedule-card { display: flex; gap: 16px; align-items: center; padding: 16px; border-radius: var(--radius); margin-bottom: 8px; background: var(--surface-dim); transition: var(--transition); }
+.schedule-card:hover { box-shadow: var(--shadow); }
+.schedule-time { font-weight: 700; font-size: 0.9rem; min-width: 80px; color: var(--primary); }
+.schedule-info { flex: 1; }
+.schedule-subject { font-weight: 600; font-size: 0.95rem; }
+.schedule-meta { font-size: 0.8rem; color: var(--text-muted); }
+.schedule-status { text-align: right; }
+
+/* Timetable grid */
+.timetable-grid { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+.timetable-grid th { background: var(--primary); color: #fff; padding: 10px 8px; text-align: center; font-weight: 600; }
+.timetable-grid td { padding: 8px; text-align: center; border: 1px solid var(--border-light); min-height: 60px; vertical-align: top; }
+.tt-cell { padding: 6px; border-radius: 6px; font-size: 0.75rem; line-height: 1.3; }
+.tt-subject { font-weight: 600; }
+.tt-teacher { color: var(--text-muted); font-size: 0.7rem; }
+.tt-room { color: var(--primary); font-size: 0.7rem; font-weight: 500; }
+.tt-lunch { background: var(--surface-container); color: var(--text-muted); font-style: italic; padding: 8px; }
+.tt-empty { color: var(--border); }
+
+/* Calendar */
+.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.cal-header { text-align: center; font-weight: 600; font-size: 0.75rem; color: var(--text-muted); padding: 8px; text-transform: uppercase; }
+.cal-day { aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 500; cursor: default; transition: var(--transition); position: relative; }
+.cal-day:hover { transform: scale(1.05); }
+.cal-day.present { background: var(--success-light); color: var(--success-dark); }
+.cal-day.absent { background: var(--danger-light); color: var(--danger-dark); }
+.cal-day.late { background: var(--warning-light); color: var(--warning-dark); }
+.cal-day.holiday { background: var(--surface-container); color: var(--text-muted); }
+.cal-day.today { outline: 2px solid var(--primary); outline-offset: -2px; }
+.cal-day.empty { background: transparent; }
+
+/* Attendance sheet */
+.attendance-controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
+.att-stats { display: flex; gap: 16px; margin-left: auto; }
+.att-stat { font-size: 0.85rem; font-weight: 600; }
+.status-toggle { display: flex; gap: 4px; }
+.status-btn { padding: 4px 10px; border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: var(--surface); color: var(--text-muted); transition: var(--transition); }
+.status-btn.active-present { background: var(--success-light); color: var(--success-dark); border-color: var(--success); }
+.status-btn.active-absent { background: var(--danger-light); color: var(--danger-dark); border-color: var(--danger); }
+.status-btn.active-late { background: var(--warning-light); color: var(--warning-dark); border-color: var(--warning); }
+
+.sticky-bottom { position: sticky; bottom: 0; background: var(--surface); padding: 16px 24px; border-top: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center; margin: 24px -24px -24px; border-radius: 0 0 var(--radius) var(--radius); }
+
+/* Notifications */
+.notif-list { display: flex; flex-direction: column; gap: 8px; }
+.notif-item { display: flex; gap: 14px; padding: 16px; border-radius: var(--radius); background: var(--surface-dim); transition: var(--transition); cursor: pointer; }
+.notif-item:hover { box-shadow: var(--shadow); }
+.notif-item.unread { background: var(--primary-light); border-left: 3px solid var(--primary); }
+.notif-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+.notif-icon.danger { background: var(--danger-light); }
+.notif-icon.warning { background: var(--warning-light); }
+.notif-icon.success { background: var(--success-light); }
+.notif-icon.info { background: var(--primary-light); }
+.notif-content { flex: 1; }
+.notif-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+.notif-desc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; }
+.notif-time { font-size: 0.7rem; color: var(--text-muted); margin-top: 4px; }
+
+/* Filter bar */
+.filter-bar { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+.filter-bar select, .filter-bar input { min-width: 140px; }
+.filter-group { display: flex; flex-direction: column; gap: 4px; }
+.filter-group label { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* Quick actions */
+.quick-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 1024px) {
+  .subject-grid { grid-template-columns: repeat(2, 1fr); }
+  .overall-card { flex-direction: column; text-align: center; }
+}
+@media (max-width: 768px) {
+  .subject-grid { grid-template-columns: 1fr; }
+  .filter-bar { flex-direction: column; }
+}
